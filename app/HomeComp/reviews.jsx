@@ -1,79 +1,78 @@
-// components/ClientReviews.jsx
+// components/FoodReviews.jsx
 "use client";
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaStar, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const reviews = [
   {
     id: 1,
-    name: "John Doe",
-    position: "CEO, Company A",
-    review:
-      "Amazing work! The project was delivered on time and exceeded expectations.",
+    name: "Alice Johnson",
+    position: "Food Blogger",
+    review: "The pasta was absolutely amazing! Fresh ingredients and rich flavors.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    image: "https://randomuser.me/api/portraits/women/11.jpg",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    position: "Marketing Head, BrandX",
-    review: "Very professional and highly skilled team. Highly recommend!",
+    name: "Mark Thompson",
+    position: "Local Chef",
+    review: "Best sushi I've had in town. Highly recommend their chef's special rolls!",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    image: "https://randomuser.me/api/portraits/men/12.jpg",
   },
   {
     id: 3,
-    name: "Mike Johnson",
-    position: "CTO, TechCorp",
-    review: "Their expertise and dedication are top-notch.",
+    name: "Sophia Lee",
+    position: "Food Enthusiast",
+    review: "Cozy ambiance and delicious desserts. Will definitely visit again.",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    image: "https://randomuser.me/api/portraits/women/13.jpg",
   },
   {
     id: 4,
-    name: "Sara Lee",
-    position: "Founder, Startup Hub",
-    review: "The results exceeded our expectations in every way.",
+    name: "Daniel Kim",
+    position: "Travel Blogger",
+    review: "Loved the smoothie variety! Perfect for a healthy start to the day.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://randomuser.me/api/portraits/men/14.jpg",
   },
   {
     id: 5,
-    name: "Robert Brown",
-    position: "Manager, AutoDeals",
-    review: "Reliable and efficient service, will work with them again.",
+    name: "Emma Davis",
+    position: "Local Resident",
+    review: "Excellent service and tasty vegan options. A must-try for everyone!",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
   },
   {
     id: 6,
-    name: "Emily Clark",
-    position: "Designer, Creatives Inc.",
-    review: "Creative solutions and great communication throughout.",
+    name: "Liam Scott",
+    position: "Food Critic",
+    review: "Innovative flavors and presentation. Truly a culinary delight.",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://randomuser.me/api/portraits/men/16.jpg",
   },
   {
     id: 7,
-    name: "David Wilson",
-    position: "Investor, FinTech",
-    review: "Professional, punctual, and very knowledgeable.",
+    name: "Olivia Martinez",
+    position: "Frequent Diner",
+    review: "Perfect family-friendly restaurant. Everyone enjoyed their meals!",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    image: "https://randomuser.me/api/portraits/women/17.jpg",
   },
   {
     id: 8,
-    name: "Anna Scott",
-    position: "HR Head, GlobalTech",
-    review: "Exceptional work quality and client-oriented approach.",
+    name: "Ethan Wilson",
+    position: "Foodie",
+    review: "Their coffee and pastries are unmatched. Cozy vibe and friendly staff.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
+    image: "https://randomuser.me/api/portraits/men/18.jpg",
   },
 ];
 
-export default function ClientReviews() {
+export default function FoodReviews() {
   const [index, setIndex] = useState(0);
   const intervalTime = 7000; // 7 seconds
 
@@ -85,10 +84,10 @@ export default function ClientReviews() {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-yellow-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-red-700">
-          What Our Clients Say
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-amber-700">
+          What Our Customers Say
         </h2>
 
         <div className="relative w-full overflow-hidden">
@@ -104,7 +103,7 @@ export default function ClientReviews() {
               <img
                 src={reviews[index].image}
                 alt={reviews[index].name}
-                className="w-24 h-24 rounded-full object-cover border-4 border-red-600"
+                className="w-24 h-24 rounded-full object-cover border-4 border-amber-600"
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
@@ -127,7 +126,7 @@ export default function ClientReviews() {
               <span
                 key={i}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  i === index ? "bg-red-600 w-6" : "bg-gray-400"
+                  i === index ? "bg-amber-600 w-6" : "bg-gray-400"
                 }`}
               />
             ))}

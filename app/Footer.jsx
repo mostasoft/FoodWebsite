@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 text-red-500 text-xl font-bold mb-4">
             <FaCarAlt className="text-2xl" />
-            AutoDealer
+            MostaSoft
           </div>
           <p className="text-sm leading-6">
             Your trusted partner for buying and selling cars.  

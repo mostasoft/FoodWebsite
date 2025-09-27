@@ -8,11 +8,13 @@ import Promotions from './HomeComp/specials';
 import BlogSection from './HomeComp/blog';
 import CTASection from './HomeComp/CTA';
 import ShopSection from './HomeComp/shop';
+import FoodMenu from './HomeComp/FoodMenu';
 
 const page = () => {
   return (
     <div>
       <Hero />
+      <FoodMenu/>
       <FeaturedInventory/>
       <ShopSection/>
       <BlogSection/>

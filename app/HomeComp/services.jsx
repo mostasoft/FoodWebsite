@@ -1,33 +1,32 @@
-// components/Services.tsx
 "use client";
 
 import React from "react";
-import { FaCarSide, FaMoneyCheckAlt, FaFileInvoiceDollar, FaTools } from "react-icons/fa";
+import { FaUtensils, FaTruck, FaConciergeBell, FaCreditCard } from "react-icons/fa";
 
 const services = [
   {
     id: 1,
-    title: "Financing Options",
-    desc: "Flexible financing plans tailored to your budget and needs.",
-    icon: <FaMoneyCheckAlt className="text-red-600 text-4xl mb-4 mx-auto" />,
+    title: "Dine-In Experience",
+    desc: "Enjoy a cozy ambiance and delicious meals freshly prepared by our chefs.",
+    icon: <FaUtensils className="text-red-600 text-4xl mb-4 mx-auto" />,
   },
   {
     id: 2,
-    title: "Trade-In Your Car",
-    desc: "Get the best value for your old vehicle when purchasing a new one.",
-    icon: <FaCarSide className="text-red-600 text-4xl mb-4 mx-auto" />,
+    title: "Fast Delivery",
+    desc: "Get your favorite dishes delivered hot and fresh right to your doorstep.",
+    icon: <FaTruck className="text-red-600 text-4xl mb-4 mx-auto" />,
   },
   {
     id: 3,
-    title: "Insurance Assistance",
-    desc: "We help you choose the right insurance for your car and peace of mind.",
-    icon: <FaFileInvoiceDollar className="text-red-600 text-4xl mb-4 mx-auto" />,
+    title: "Catering Services",
+    desc: "Perfect for parties, events, or corporate meetings—custom menus available.",
+    icon: <FaConciergeBell className="text-red-600 text-4xl mb-4 mx-auto" />,
   },
   {
     id: 4,
-    title: "Maintenance & Repairs",
-    desc: "Full-service maintenance and repairs to keep your car in top condition.",
-    icon: <FaTools className="text-red-600 text-4xl mb-4 mx-auto" />,
+    title: "Easy Payments",
+    desc: "Multiple payment options including cards, wallets, and cash on delivery.",
+    icon: <FaCreditCard className="text-red-600 text-4xl mb-4 mx-auto" />,
   },
 ];
 
@@ -37,7 +36,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
         <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-          We provide a wide range of services to make your car buying experience seamless and worry-free.
+          We offer more than just great food — our services are designed to give you a seamless dining experience.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

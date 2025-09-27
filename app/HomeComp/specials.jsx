@@ -1,4 +1,4 @@
-// components/SpecialOffersComplex.jsx
+// components/FoodSpecialOffers.jsx
 "use client";
 
 import React from "react";
@@ -8,76 +8,76 @@ import Link from "next/link";
 const offers = [
   {
     id: 1,
-    title: "Tesla Model S - 10% Off",
-    desc: "Limited time offer for Tesla Model S, drive electric in style.",
-    image: "/1 (1).jpg",
+    title: "Margherita Pizza - 20% Off",
+    desc: "Classic Italian pizza with fresh ingredients, limited time offer!",
+    image: "/food/offer1.jpg",
     tag: "Hot",
-    link: "/inventory/tesla-model-s",
+    link: "/menu/margherita-pizza",
   },
   {
     id: 2,
-    title: "BMW X5 - Summer Deal",
-    desc: "Luxury SUV with amazing summer discounts. Don't miss out!",
-    image: "/1 (2).jpg",
+    title: "Chocolate Lava Cake - Sweet Deal",
+    desc: "Indulge in our rich and gooey chocolate lava cake.",
+    image: "/food/offer2.jpg",
     tag: "New",
-    link: "/inventory/bmw-x5",
+    link: "/menu/chocolate-lava-cake",
   },
   {
     id: 3,
-    title: "Ford Mustang - Special Edition",
-    desc: "Limited stock Mustang with iconic style and power.",
-    image: "/1 (3).jpg",
+    title: "Vegan Burger Combo",
+    desc: "Delicious plant-based burger with fries and drink included.",
+    image: "/food/offer3.jpg",
     tag: "Hot",
-    link: "/inventory/ford-mustang",
+    link: "/menu/vegan-burger-combo",
   },
   {
     id: 4,
-    title: "Audi Q7 - Exclusive Offer",
-    desc: "Drive in style with Audi Q7 at special financing rates.",
-    image: "/1 (4).jpg",
+    title: "Sushi Platter - Exclusive Offer",
+    desc: "Fresh sushi platter perfect for sharing with friends.",
+    image: "/food/offer4.jpg",
     tag: "New",
-    link: "/inventory/audi-q7",
+    link: "/menu/sushi-platter",
   },
   {
     id: 5,
-    title: "Mercedes GLE - Hot Deal",
-    desc: "Premium SUV for the best price this season.",
-    image: "/1 (5).jpg",
+    title: "Italian Pasta Feast",
+    desc: "Enjoy our chef’s special pasta dishes at a discounted price.",
+    image: "/food/offer5.jpg",
     tag: "Hot",
-    link: "/inventory/mercedes-gle",
+    link: "/menu/italian-pasta-feast",
   },
   {
     id: 6,
-    title: "Porsche 911 - Limited Offer",
-    desc: "Iconic sports car available for a limited-time discount.",
-    image: "/1 (6).jpg",
+    title: "Refreshing Smoothie Pack",
+    desc: "Boost your day with our healthy smoothie pack.",
+    image: "/food/offer6.jpg",
     tag: "New",
-    link: "/inventory/porsche-911",
+    link: "/menu/smoothie-pack",
   },
   {
     id: 7,
-    title: "Lamborghini Aventador - Super Deal",
-    desc: "Feel the power and luxury with Lamborghini Aventador.",
-    image: "/1 (7).jpg",
+    title: "Family Meal Deal",
+    desc: "Special combo for the whole family, including appetizers and desserts.",
+    image: "/food/offer7.jpg",
     tag: "Hot",
-    link: "/inventory/lamborghini-aventador",
+    link: "/menu/family-meal-deal",
   },
   {
     id: 8,
-    title: "Jaguar F-Type - Exclusive",
-    desc: "Sporty, stylish, and powerful Jaguar F-Type now on offer.",
-    image: "/1 (8).jpg",
+    title: "Gourmet Coffee - Limited Time",
+    desc: "Try our special gourmet coffee with a 15% discount.",
+    image: "/food/offer8.jpg",
     tag: "New",
-    link: "/inventory/jaguar-f-type",
+    link: "/menu/gourmet-coffee",
   },
 ];
 
-export default function SpecialOffersComplex() {
+export default function FoodSpecialOffers() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-yellow-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-red-700">
-          Special Offers
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-amber-700">
+          Special Food Offers
         </h2>
 
         <div className="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
@@ -97,7 +97,7 @@ export default function SpecialOffersComplex() {
                 <p className="text-gray-600 mb-4">{offer.desc}</p>
                 <Link
                   href={offer.link}
-                  className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition"
+                  className="bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-700 transition"
                 >
                   Explore
                 </Link>

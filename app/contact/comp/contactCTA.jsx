@@ -1,20 +1,42 @@
-// components/ContactCTA.tsx
-export default function ContactCTA() {
+"use client"
+// components/ContactCTAFood.jsx
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function ContactCTAFood() {
   return (
-    <section className="py-20 bg-red-500 text-white text-center">
+    <section className="py-20 bg-green-500 text-white text-center">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Let’s Get You Behind the Wheel!
-        </h2>
-        <p className="text-lg mb-8">
-          Book a test drive today or explore our latest inventory online.
-        </p>
-        <a
-          href="/inventory"
-          className="inline-block bg-white text-red-600 font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100 transition"
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-6"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          Browse Inventory
-        </a>
+          Hungry for Something Delicious?
+        </motion.h2>
+
+        <motion.p
+          className="text-lg mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          Explore our recipes, order fresh meals, or subscribe to our newsletter for weekly foodie inspiration!
+        </motion.p>
+
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6, type: "spring", stiffness: 120 }}
+        >
+          <a
+            href="/recipes"
+            className="inline-block bg-white text-green-600 font-semibold py-3 px-6 rounded-lg shadow hover:bg-green-50 transition transform hover:scale-105"
+          >
+            View Recipes
+          </a>
+        </motion.div>
       </div>
     </section>
   );

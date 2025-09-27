@@ -1,45 +1,45 @@
-// components/AboutUsEnhanced.jsx
+// components/AboutUsFood.jsx
 "use client";
 
 import React from "react";
-import { FaHandshake, FaTools, FaShieldAlt } from "react-icons/fa";
+import { FaUtensils, FaLeaf, FaAward } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <FaHandshake />,
-    title: "Trusted Dealership",
-    desc: "We have years of experience and a proven track record in providing reliable cars and services.",
-    tag: "1000+ Cars Sold",
-    color: "bg-red-600",
+    icon: <FaUtensils />,
+    title: "Fresh & Delicious",
+    desc: "We use only the freshest ingredients to create mouth-watering dishes every day.",
+    tag: "100+ Dishes Served",
+    color: "bg-amber-600",
   },
   {
-    icon: <FaTools />,
-    title: "Maintenance & Service",
-    desc: "Full-service maintenance and support for your vehicle, ensuring safety and performance.",
-    tag: "500+ Services",
-    color: "bg-blue-600",
-  },
-  {
-    icon: <FaShieldAlt />,
-    title: "Warranty & Assurance",
-    desc: "All vehicles come with warranty options and guarantees for a worry-free purchase.",
-    tag: "24/7 Support",
+    icon: <FaLeaf />,
+    title: "Healthy Options",
+    desc: "Our menu includes a variety of healthy and vegan-friendly meals for everyone.",
+    tag: "50+ Vegan Meals",
     color: "bg-green-600",
+  },
+  {
+    icon: <FaAward />,
+    title: "Award-Winning Recipes",
+    desc: "Our chefs craft unique recipes that have been recognized and loved by food critics.",
+    tag: "5-Star Reviews",
+    color: "bg-red-600",
   },
 ];
 
-export default function AboutUsEnhanced() {
+export default function AboutUsFood() {
   return (
-    <section className="relative py-20 bg-gray-50 overflow-hidden">
+    <section className="relative py-20 bg-yellow-50 overflow-hidden">
       {/* Background blobs */}
-      <div className="absolute top-0 -left-16 w-64 h-64 bg-red-200 rounded-full opacity-30 -z-10 animate-pulse"></div>
-      <div className="absolute bottom-0 -right-16 w-72 h-72 bg-blue-200 rounded-full opacity-30 -z-10 animate-pulse"></div>
+      <div className="absolute top-0 -left-16 w-64 h-64 bg-amber-200 rounded-full opacity-30 -z-10 animate-pulse"></div>
+      <div className="absolute bottom-0 -right-16 w-72 h-72 bg-green-200 rounded-full opacity-30 -z-10 animate-pulse"></div>
 
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4 text-red-700">Why Choose Us</h2>
+        <h2 className="text-4xl font-bold mb-4 text-amber-700">Why Dine With Us</h2>
         <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
-          At AutoDealer, we provide high-quality vehicles with exceptional customer service. Our experienced team ensures a smooth buying experience from start to finish.
+          At our restaurant, we serve fresh, delicious meals crafted with love. Our chefs and staff ensure an unforgettable dining experience for every guest.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

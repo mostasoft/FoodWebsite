@@ -1,88 +1,88 @@
+// components/Hero.jsx
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
-
-const cars = [
-  {
-    id: 1,
-    name: "2025 Tesla Model S",
-    desc: "Experience the future of driving with electric power, unmatched performance, and cutting-edge tech.",
-    image: "/1.avif",
-  },
-  {
-    id: 2,
-    name: "2025 BMW X5",
-    desc: "Luxury meets power – the BMW X5 offers elegance, comfort, and strong performance.",
-    image: "/image.png",
-  },
-  {
-    id: 3,
-    name: "2025 Ford Mustang",
-    desc: "Unleash raw performance and iconic style with the all-new Mustang sports edition.",
-    image: "/photo-1568605117036-5fe5e7bab0b7.avif",
-  },
-];
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [menuItems, setMenuItems] = useState([]);
 
-  // Auto-play every 8 seconds
+  // Simulate fetching menu items from a shop page
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % cars.length);
-    }, 10000); // 8 seconds
-    return () => clearInterval(interval);
+    const data = [
+      { name: "Pizza Margherita", price: "$12", image: "/images/pizza.jpg" },
+      { name: "Cheeseburger", price: "$10", image: "/images/burger.jpg" },
+      { name: "Vegan Salad", price: "$8", image: "/images/salad.jpg" },
+      { name: "Spaghetti Bolognese", price: "$11", image: "/images/spaghetti.jpg" },
+      { name: "Sushi Platter", price: "$15", image: "/images/sushi.jpg" },
+    ];
+    setMenuItems(data);
   }, []);
 
-  return (
-    <section className="relative w-full h-[90vh] overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={cars[index].id}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0"
-        >
-          <img
-            src={cars[index].image}
-            alt={cars[index].name}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </motion.div>
-      </AnimatePresence>
+  // Live filtered results
+  const filteredItems = menuItems.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-6 text-white">
-        <motion.h1
-          key={cars[index].name}
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
+  return (
+    <section className="w-full bg-red-50 py-20 flex flex-col items-center justify-center text-center px-4">
+      {/* Headline */}
+      <h1 className="text-4xl md:text-6xl font-bold text-red-600 mb-4">
+        Delicious Food, Delivered to You
+      </h1>
+
+      {/* Subheadline */}
+      <p className="text-gray-700 text-lg md:text-xl mb-8 max-w-2xl">
+        Explore our menu and order your favorite meals with just a few clicks.
+      </p>
+
+      {/* Search Bar */}
+      <div className="w-full max-w-md flex items-center border rounded-lg overflow-hidden shadow-md mb-8">
+        <input
+          type="text"
+          placeholder="Search dishes, meals or drinks..."
+          className="flex-1 px-4 py-2 outline-none"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button
+          className="bg-red-600 text-white px-4 py-2 hover:bg-red-700 transition"
+          onClick={() => {}}
         >
-          {cars[index].name}
-        </motion.h1>
-        <motion.p
-          key={cars[index].desc}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-xl text-lg md:text-xl mb-6"
-        >
-          {cars[index].desc}
-        </motion.p>
-        <Link
-          href="/inventory"
-          className="bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded-lg font-semibold"
-        >
-          Explore Cars
-        </Link>
+          Search
+        </button>
       </div>
+
+      {/* Food Cards */}
+      <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+        {filteredItems.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4 text-left">
+              <p className="font-semibold text-lg">{item.name}</p>
+              <p className="text-gray-500">{item.price}</p>
+            </div>
+          </div>
+        ))}
+        {filteredItems.length === 0 && (
+          <p className="text-gray-500 col-span-full">No results found.</p>
+        )}
+      </div>
+
+      {/* Call to Action */}
+      <a
+        href="/shop"
+        className="bg-red-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition"
+      >
+        View Menu
+      </a>
     </section>
   );
 }

@@ -1,4 +1,3 @@
-// components/CTASection.tsx
 "use client";
 
 import React from "react";
@@ -9,24 +8,24 @@ export default function CTASection() {
     <section className="py-20 bg-red-600 text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          Ready to Drive Your Dream Car?
+          Hungry for Something Delicious?
         </h2>
         <p className="text-lg md:text-xl mb-8 text-white/90">
-          Explore our wide range of vehicles and experience a seamless buying process. Book your test drive today!
+          Browse our menu and treat yourself to an unforgettable meal. Reserve your table or order now!
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
-            href="/inventory"
+            href="/menu"
             className="bg-white text-red-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition"
           >
-            View Inventory
+            View Menu
           </Link>
           <Link
-            href="/contact"
+            href="/reservation"
             className="bg-black text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-900 transition"
           >
-            Book a Test Drive
+            Book a Table
           </Link>
         </div>
       </div>
