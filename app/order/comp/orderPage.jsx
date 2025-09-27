@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import products from './../../lib/product';
+import products from './../../../lib/product';
 
 export default function OrderPage() {
   const searchParams = useSearchParams();
