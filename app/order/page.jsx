@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import OrderPage from './comp/orderPage';
 
 const page = () => {
