@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import InventoryFilters from './comp/filters';
 import InventoryList from './comp/list';
