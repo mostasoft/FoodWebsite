@@ -10,11 +10,12 @@ export default function Hero() {
   // Simulate fetching menu items from a shop page
   useEffect(() => {
     const data = [
-      { name: "Pizza Margherita", price: "$12", image: "/images/pizza.jpg" },
-      { name: "Cheeseburger", price: "$10", image: "/images/burger.jpg" },
-      { name: "Vegan Salad", price: "$8", image: "/images/salad.jpg" },
-      { name: "Spaghetti Bolognese", price: "$11", image: "/images/spaghetti.jpg" },
-      { name: "Sushi Platter", price: "$15", image: "/images/sushi.jpg" },
+      { name: "Pizza Margherita", price: "$12", image: "/pizza-margherita.jpg" },
+      { name: "Cheeseburger", price: "$10", image: "/Cheeseburger.jpg" },
+      { name: "Vegan Salad", price: "$8", image: "/Vegan Salad.jpg" },
+      { name: "Spaghetti Bolognese", price: "$11", image: "/spaghetti bolognese.jpg" },
+      { name: "Sushi Platter", price: "$15", image: "/Sushi Platter.jpg" },
+      { name: "Sushi Platter", price: "$15", image: "/Sushi Platter.jpg" },
     ];
     setMenuItems(data);
   }, []);
@@ -75,14 +76,6 @@ export default function Hero() {
           <p className="text-gray-500 col-span-full">No results found.</p>
         )}
       </div>
-
-      {/* Call to Action */}
-      <a
-        href="/shop"
-        className="bg-red-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition"
-      >
-        View Menu
-      </a>
     </section>
   );
 }

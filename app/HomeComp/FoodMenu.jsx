@@ -5,13 +5,12 @@ import React from "react";
 
 export default function FoodMenu() {
   const menuItems = [
-    { name: "Chicken", price: "$20.99", image: "/images/chicken.jpg" },
-    { name: "Biryani", price: "From $8", image: "/images/biryani.jpg" },
-    { name: "Masala Dosa", price: "From $5", image: "/images/masala-dosa.jpg" },
-    { name: "Paneer Tikka", price: "From $15", image: "/images/paneer-tikka.jpg" },
-    { name: "Rogan Josh", price: "$12.49/kg", image: "/images/rogan-josh.jpg" },
-    { name: "Butter Chicken", price: "$24.99/kg", image: "/images/butter-chicken.jpg" },
-    { name: "Butter Chicken", price: "$24.99/kg", image: "/images/butter-chicken.jpg" },
+    { name: "Chicken", price: "$20.99", image: "/chicken.jpg" },
+    { name: "Biryani", price: "From $8", image: "/biryani.jpg" },
+    { name: "Masala Dosa", price: "From $5", image: "/Masala Dosa.jpg" },
+    { name: "Paneer Tikka", price: "From $15", image: "/Paneer Tikka.jpg" },
+    { name: "Paneer Tikka", price: "From $15", image: "/Paneer Tikka.jpg" },
+    { name: "Paneer Tikka", price: "From $15", image: "/Paneer Tikka.jpg" }
   ];
 
   return (

@@ -1,15 +1,17 @@
 "use client";
 
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 // Sample food items
 const foods = [
-  { name: "Veggie Pizza", category: "Lunch", cuisine: "Italian", diet: "Vegetarian" },
-  { name: "Chicken Burger", category: "Lunch", cuisine: "American", diet: "Non-Veg" },
-  { name: "Vegan Salad", category: "Dinner", cuisine: "International", diet: "Vegan" },
-  { name: "Pasta Alfredo", category: "Dinner", cuisine: "Italian", diet: "Vegetarian" },
-  { name: "Samosa", category: "Snacks", cuisine: "Indian", diet: "Vegetarian" },
-  { name: "Spring Rolls", category: "Snacks", cuisine: "Chinese", diet: "Vegan" },
+  { name: "Veggie Pizza",  price:"10$", category: "Lunch", cuisine: "Italian", diet: "Vegetarian", slug: "veggie-pizza" },
+  { name: "Chicken Burger", price:"10$", category: "Lunch", cuisine: "American", diet: "Non-Veg", slug: "chicken-burger" },
+  { name: "Vegan Salad", price:"10$", category: "Dinner", cuisine: "International", diet: "Vegan", slug: "vegan-salad" },
+  { name: "Pasta Alfredo",  price:"10$",category: "Dinner", cuisine: "Italian", diet: "Vegetarian", slug: "pasta-alfredo" },
+  { name: "Samosa",  price:"10$",category: "Snacks", cuisine: "Indian", diet: "Vegetarian", slug: "samosa" },
+  { name: "Spring Rolls", price:"10$", category: "Snacks", cuisine: "Chinese", diet: "Vegan", slug: "spring-rolls" },
 ];
 
 export default function FoodMenuFilters() {
@@ -17,18 +19,18 @@ export default function FoodMenuFilters() {
   const [cuisine, setCuisine] = useState("");
   const [diet, setDiet] = useState("");
   const [filteredFoods, setFilteredFoods] = useState(foods);
+  const searchParams = useSearchParams(); // ✅ Hook call
 
-  // Real-time filtering
   useEffect(() => {
-    setFilteredFoods(
-      foods.filter(
-        (f) =>
-          (category === "" || f.category === category) &&
-          (cuisine === "" || f.cuisine === cuisine) &&
-          (diet === "" || f.diet === diet)
-      )
-    );
-  }, [category, cuisine, diet]);
+    const productParam = searchParams.get("product"); // ✅ Correct usage
+    if (productParam) {
+      const product = foods.find((p) => p.slug === productParam);
+      if (product) {
+        console.log("Selected Product:", product);
+        // here you can setCart([{ ...product, quantity: 1 }]) if you have cart state
+      }
+    }
+  }, [searchParams]);
 
   return (
     <div className="flex flex-col md:flex-row gap-8">
@@ -91,11 +93,25 @@ export default function FoodMenuFilters() {
           filteredFoods.map((food, i) => (
             <div key={i} className="bg-white rounded-xl shadow-lg p-4 text-center">
               <h3 className="text-lg font-semibold mb-2">{food.name}</h3>
-              <p className="text-gray-500">{food.category} • {food.cuisine} • {food.diet}</p>
+              <p className="text-gray-500">
+                {food.category} • {food.cuisine} • {food.diet}
+              </p>
+              <p className="text-lg font-semibold">{food.price}</p>
+
+              {/* Order Now Button → goes to order page with product slug */}
+              <Link
+                href={`/order?product=${food.slug}`}
+                className="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
+              >
+                Order Now
+              </Link>
+              
             </div>
           ))
         ) : (
-          <p className="text-gray-500 col-span-full text-center">No foods match your filters.</p>
+          <p className="text-gray-500 col-span-full text-center">
+            No foods match your filters.
+          </p>
         )}
       </div>
     </div>

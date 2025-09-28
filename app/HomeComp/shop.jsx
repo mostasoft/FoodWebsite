@@ -5,11 +5,11 @@ import Link from "next/link";
 
 // Sample dish data
 const dishes = [
-  { id: 1, name: "Margherita Pizza", cuisine: "Italian", category: "Pizza", price: 12.99, available: 2025, image: "/food/pizza.jpg", featured: true },
-  { id: 2, name: "Spicy Ramen", cuisine: "Japanese", category: "Noodles", price: 14.5, available: 2025, image: "/food/ramen.jpg", featured: false },
-  { id: 3, name: "Butter Chicken", cuisine: "Indian", category: "Curry", price: 13.75, available: 2024, image: "/food/butter-chicken.jpg", featured: true },
-  { id: 4, name: "Vegan Bowl", cuisine: "Fusion", category: "Vegan", price: 11.0, available: 2025, image: "/food/buddha-bowl.jpg", featured: false },
-  { id: 5, name: "Cheeseburger", cuisine: "American", category: "Burger", price: 10.99, available: 2023, image: "/food/burger.jpg", featured: false },
+  { id: 1, name: "Margherita Pizza", cuisine: "Italian", category: "Pizza", price: 12.99, available: 2025, image: "/pizza-margherita.jpg", featured: true },
+  { id: 2, name: "Spicy Ramen", cuisine: "Japanese", category: "Noodles", price: 14.5, available: 2025, image: "/Spicy Ramen.jpg", featured: false },
+  { id: 3, name: "Butter Chicken", cuisine: "Indian", category: "Curry", price: 13.75, available: 2024, image: "/Butter Chicken.jpg", featured: true },
+  { id: 4, name: "Vegan Bowl", cuisine: "Fusion", category: "Vegan", price: 11.0, available: 2025, image: "/Vegan Buddha Bowl.jpg", featured: false },
+  { id: 5, name: "Cheeseburger", cuisine: "American", category: "Burger", price: 10.99, available: 2023, image: "/Cheeseburger.jpg", featured: false },
 ];
 
 const cuisines = ["All", "Italian", "Japanese", "Indian", "Fusion", "American"];

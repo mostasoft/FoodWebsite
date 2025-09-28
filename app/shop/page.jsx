@@ -6,12 +6,12 @@ import SpecialOffers from './comp/Specials';
 import NewsTips from './comp/news';
 import Reviews from './comp/review';
 import AboutUs from './comp/whyus';
-import Hero from './../HomeComp/Hero';
+import FoodHero from './comp/Hero';
 
 const page = () => {
   return (
     <div>
-        <Hero/>
+        <FoodHero/>
         <InventoryFilters/>
         <InventoryList/>
         <FeaturedInventory/>

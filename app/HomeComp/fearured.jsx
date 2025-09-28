@@ -11,7 +11,7 @@ const featuredDishes = [
     name: "Margherita Pizza",
     category: "Pizza",
     price: 12.99,
-    image: "/food/pizza.jpg",
+    image: "/pizza-margherita.jpg",
     badge: "Chef's Special",
   },
   {
@@ -19,7 +19,7 @@ const featuredDishes = [
     name: "Spicy Ramen",
     category: "Noodles",
     price: 14.5,
-    image: "/food/ramen.jpg",
+    image: "/Spicy Ramen.jpg",
     badge: "Popular",
   },
   {
@@ -27,7 +27,7 @@ const featuredDishes = [
     name: "Grilled Salmon",
     category: "Seafood",
     price: 18.75,
-    image: "/food/salmon.jpg",
+    image: "/Grilled Salmon.jpg",
     badge: "New",
   },
   {
@@ -35,7 +35,7 @@ const featuredDishes = [
     name: "Vegan Buddha Bowl",
     category: "Vegan",
     price: 11.0,
-    image: "/food/buddha-bowl.jpg",
+    image: "/Vegan Buddha Bowl.jpg",
     badge: "Healthy",
   },
   {
@@ -43,7 +43,7 @@ const featuredDishes = [
     name: "Cheeseburger Deluxe",
     category: "Burgers",
     price: 10.99,
-    image: "/food/burger.jpg",
+    image: "/Cheeseburger Deluxe.jpg",
     badge: "Featured",
   },
   {
@@ -51,7 +51,7 @@ const featuredDishes = [
     name: "Chicken Tikka Masala",
     category: "Indian",
     price: 13.25,
-    image: "/food/tikka-masala.jpg",
+    image: "/Paneer Tikka.jpg",
     badge: "Spicy",
   },
   {
@@ -59,7 +59,7 @@ const featuredDishes = [
     name: "Sushi Platter",
     category: "Japanese",
     price: 22.5,
-    image: "/food/sushi.jpg",
+    image: "/Sushi Platter.jpg",
     badge: "Limited",
   },
   {
@@ -67,7 +67,7 @@ const featuredDishes = [
     name: "Pad Thai",
     category: "Thai",
     price: 12.0,
-    image: "/food/pad-thai.jpg",
+    image: "/Pad Thai.jpg",
     badge: "Trending",
   },
   {
@@ -75,7 +75,7 @@ const featuredDishes = [
     name: "Chocolate Lava Cake",
     category: "Dessert",
     price: 7.99,
-    image: "/food/lava-cake.jpg",
+    image: "/Chocolate Lava Cake.jpg",
     badge: "Sweet Pick",
   },
 ];
