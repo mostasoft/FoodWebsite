@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { Suspense } from 'react'
 import InventoryFilters from './comp/filters';
 import InventoryList from './comp/list';
 import FeaturedInventory from './comp/featured';
@@ -11,7 +11,8 @@ import FoodHero from './comp/Hero';
 
 const page = () => {
   return (
-    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+      <div>
         <FoodHero/>
         <InventoryFilters/>
         <InventoryList/>
@@ -21,6 +22,8 @@ const page = () => {
         <Reviews/>
         <AboutUs/>
     </div>
+    </Suspense>
+    
   )
 }
 
